@@ -22,6 +22,4 @@ def setup(token):
     dispatcher = Dispatcher(bot, None, workers=0)
     dispatcher.add_handler(CommandHandler('hello', hello))
 
-    ##### Register handlers here #####
-
     return bot, dispatcher
