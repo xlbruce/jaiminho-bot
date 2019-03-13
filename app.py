@@ -8,11 +8,9 @@ from telegram import Update
 app = Flask(__name__)
 bot, dispatcher = bot.setup(bot.token)
 
-logger = logging.getLogger(__name__)
-
 @app.route("/")
 def hello():
-    return "Hello World!"
+    return "Run <pre>curl https://api.telegram.org/bot{my_bot_token}/setWebhook?url={url_to_send_updates_to}</pre> to setup Telegram Webhook."
 
 @app.route("/telegram", methods=['POST'])
 def forward():
