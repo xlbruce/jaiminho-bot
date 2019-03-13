@@ -7,7 +7,7 @@ from telegram.ext import CommandHandler, Dispatcher
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
-def hello(update):
+def hello(bot, update):
     update.message.reply_text(
         'Hello {}'.format(update.message.from_user.first_name))
 
