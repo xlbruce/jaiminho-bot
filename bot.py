@@ -15,7 +15,7 @@ def hello(bot, update):
     reply('Hello {} [{}]'.format(update.message.from_user.first_name, int(random() * 1000)))
 
 
-def enel(bot, update):
+def enel_handler(bot, update):
     reply = update.message.reply_text
     """ Command have form: /enel <cpf> <instalacao>"""
     arguments = update.message.text.split()
@@ -43,6 +43,6 @@ def setup(token):
 
     dispatcher = Dispatcher(bot, None, workers=0)
     dispatcher.add_handler(CommandHandler('hello', hello))
-    dispatcher.add_handler(CommandHandler('enel', enel))
+    dispatcher.add_handler(CommandHandler('enel', enel_handler))
 
     return bot, dispatcher
