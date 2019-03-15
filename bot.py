@@ -20,7 +20,8 @@ def enel_handler(bot, update):
     """ Command have form: /enel <cpf> <instalacao>"""
     arguments = update.message.text.split()
     if (len(arguments) is not 3):
-        reply('Por favor, informe o CPF e numero de instalacao')
+        reply('Por favor, informe o CPF e numero de instalacao. Exemplo:')
+        reply('/enel 12312312312 231472618')
         return
 
     cpf, instalacao = arguments[1:] 
