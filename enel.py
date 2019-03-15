@@ -11,7 +11,8 @@ jinja = Environment(
 
 def format_invoice(invoice):
     due_date = datetime.strptime(invoice['VENCIMENTO'], '%Y%m%d').strftime('%d/%m/%Y')
-    value = "R$ {}".format(invoice['MONTANTE'].replace('.',','))
+    value_str = str(invoice['MONTANTE']).replace('.',',')
+    value = "R$ {}".format(value_str)
     return {
         'due_date': due_date,
         'value': value,
