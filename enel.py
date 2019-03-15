@@ -5,7 +5,7 @@ from datetime import datetime
 from requests import Session
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
+locale.setlocale(locale.LC_ALL, '')
 
 jinja = Environment(
     loader=FileSystemLoader('templates'),
