@@ -29,7 +29,7 @@ def enel(bot, update):
         reply('Aqui estão suas faturas em aberto')
         for invoice in invoices:
             reply(invoice)
-    except as f:
+    except Exception as f:
         reply('Não foi possível consultar as faturas. Tente novamente mais tarde.')
         reply(f)
 
