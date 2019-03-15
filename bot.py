@@ -18,7 +18,7 @@ def hello(bot, update):
 def enel(bot, update):
     reply = update.message.reply_text
     """ Command have form: /enel <cpf> <instalacao>"""
-    arguments = update.message.split()
+    arguments = update.message.text.split()
     if (len(arguments) is not 3):
         reply('Por favor, informe o CPF e numero de instalacao')
         return
