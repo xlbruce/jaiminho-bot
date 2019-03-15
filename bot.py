@@ -10,7 +10,7 @@ logging.basicConfig(level=logging.DEBUG,
 
 def hello(bot, update):
     reply = update.message.reply_text
-    reply('Hello {} [{}]'.format(update.message.from_user.first_name), int(random() * 1000))
+    reply('Hello {} [{}]'.format(update.message.from_user.first_name, int(random() * 1000)))
 
 
 def enel(bot, update):
