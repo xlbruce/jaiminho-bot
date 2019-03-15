@@ -29,8 +29,9 @@ def enel(bot, update):
         reply('Aqui estão suas faturas em aberto')
         for invoice in invoices:
             reply(invoice)
-    except:
+    except as f:
         reply('Não foi possível consultar as faturas. Tente novamente mais tarde.')
+        reply(f)
 
 
 token = os.getenv('TELEGRAM_TOKEN')
