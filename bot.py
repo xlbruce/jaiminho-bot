@@ -9,8 +9,8 @@ logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
 def hello(bot, update):
-    update.message.reply_text(
-        'Hello {}'.format(update.message.from_user.first_name))
+    reply = update.message.reply_text
+    reply('Hello {} [{}]'.format(update.message.from_user.first_name), int(random() * 1000))
 
 
 def enel(bot, update):
