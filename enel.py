@@ -5,15 +5,13 @@ from datetime import datetime
 from requests import Session
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-locale.setlocale(locale.LC_ALL, '')
-
 jinja = Environment(
     loader=FileSystemLoader('templates'),
 )
 
 def format_invoice(invoice):
     due_date = datetime.strptime(invoice['VENCIMENTO'], '%Y%m%d').strftime('%d/%m/%Y')
-    value = locale.currency(invoice['MONTANTE'])
+    value = "R$ {}".format(invoice['MONTANTE'].replace('.',','))
     return {
         'due_date': due_date,
         'value': value,
