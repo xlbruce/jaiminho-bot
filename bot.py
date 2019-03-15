@@ -1,6 +1,7 @@
 import enel
 import logging
 import os
+import random
 
 from telegram import Bot
 from telegram.ext import CommandHandler, Dispatcher
