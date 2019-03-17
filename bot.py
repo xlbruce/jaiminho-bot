@@ -27,6 +27,9 @@ def enel_handler(bot, update):
     cpf, instalacao = arguments[1:] 
     try: 
         invoices = enel.get_invoices_pretty_print({'cpf':cpf, 'instalacao':instalacao})
+        if not invoices:
+            reply('Não há faturas pendentes :smile:')
+            return
         reply('Aqui estão suas faturas em aberto')
         for invoice in invoices:
             reply(invoice)
