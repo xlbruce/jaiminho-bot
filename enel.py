@@ -22,7 +22,7 @@ def format_invoice(invoice):
 def get_invoices_pretty_print(user_credentials):
     invoices = get_invoices(user_credentials)
     template = jinja.get_template('invoice.txt')
-    return map(template.render, invoices)
+    return list(map(template.render, invoices))
 
 def get_invoices(user_credentials):
     """`user_credentials` is a dict containing `cpf` and `instalacao` keys""" 
