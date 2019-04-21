@@ -1,3 +1,0 @@
-Código de barras: {{ barcode }}
-Valor a ser pago: {{ value }}
-Vencimento: {{ due_date }}
